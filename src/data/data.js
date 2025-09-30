@@ -1,7 +1,7 @@
 import img1 from '../assets/a1.jpg';
 import img2 from '../assets/a2.jpg';
 import imgu1 from '../assets/u1.jpg';
-import imgu2 from '../assets/u2.webp';
+// import imgu2 from '../assets/u2.webp';
 import imgu3 from '../assets/u3.jpg';
 import imgu4 from '../assets/u4.jpg';
 import imgu5 from '../assets/u5.jpg';
@@ -44,19 +44,19 @@ export const DUMMY_PROFILES = [
 
 
 export const upperSliderImages = [
-  { img: imgu1, para: "Hot Love Doll" },
-  { img: imgu2, para: "Sexy Toy Doll" },
-  { img: imgu3, para: "Wild Fantasy Doll" },
-  { img: imgu4, para: "Dream Girl Doll" },
-  { img: imgu5, para: "Luxury Sex Doll" },
-  { img: imgu10, para: "Passion Toy Doll" },
-  { img: imgu11, para: "Romantic Love Doll" },
-  { img: imgu6, para: "Hot Fantasy Doll" },
-  { img: imgu7, para: "Wild Pleasure Doll" },
-  { img: imgu12, para: "Seduction Toy Doll" },
-  { img: imgu8, para: "Premium Sex Doll" },
-  { img: imgu9, para: "Realistic Love Doll" },
-  { img: imgu13, para: "Silicon Toy Doll" },
+  { img: imgu1, para: "Sofia Rossi" },
+  // { img: imgu2, para: "Eva Müller" },
+  { img: imgu3, para: "Lara Novak" },
+  { img: imgu4, para: "Elena Petrova" },
+  { img: imgu5, para: "Amelie Dubois" },
+  { img: imgu10, para: "Chiara Romano" },
+  { img: imgu11, para: "Ingrid Hansen" },
+  { img: imgu6, para: "Marta Silva" },
+  { img: imgu7, para: "Klara Schmidt" },
+  { img: imgu12, para: "Olga Ivanova" },
+  { img: imgu8, para: "Isabelle Laurent" },
+  { img: imgu9, para: "Zara Popescu" },
+  { img: imgu13, para: "Anya Volkova" },
 ];
 
 

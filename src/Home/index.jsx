@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useEffect, useState } from 'react';
 import { postLocation } from '../api';
+import banner from '../assets/banner.avif';
 import Confirmation from '../components/Confirmation';
 import ProfileCard from '../components/ProfileCard';
 import { DUMMY_PROFILES, sliderImages, upperSliderImages } from '../data/data';
@@ -122,24 +123,28 @@ export default function Home() {
                     <UShopping images={upperSliderImages} />
 
                 </div>
-                <h2 className='text-pink'>Book a Profile</h2>
-                <div className="">
-                    <div className="row">
-                        {DUMMY_PROFILES?.map((p) => (
-                            <div className="col-lg-3 col-md-6 col-sm-6 col-12" key={p.id}>
-                                <ProfileCard
-                                    profile={p}
-                                    busy={busyId === p.id}
-                                    onBook={() => handleBook(p)}
-                                />
-                            </div>
-                        ))}
+                <div className='mt-lg-4 mt-3'>
+                    <h2 className='text-pink'>Book a Profile</h2>
+                    <div className="">
+                        <div className="row">
+                            {DUMMY_PROFILES?.map((p) => (
+                                <div className="col-lg-3 col-md-6 col-sm-6 col-12" key={p.id}>
+                                    <ProfileCard
+                                        profile={p}
+                                        busy={busyId === p.id}
+                                        onBook={() => handleBook(p)}
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-                {/* slider */}
-                <div>
-                    <h3 className='text-pink mt-3'>Beautiful Silicone Fantasy Doll (🤑 Big Savings 🤑 Sale 50% OFF)</h3>
-                    <Shopping images={sliderImages} />
+
+                <div className='w-100 py-3 mt-3'>
+                    <h4 className='text-center p-3 mt-2 text-pink'>Bask in the charm of a stunning beach escape.
+                        Feel the allure of timeless beauty under the golden sun.
+                        Where elegance and desire meet the rhythm of the waves</h4>
+                    {/* <img src={banner} alt="banner" className='w-100 banner_img rounded-3' /> */}
                 </div>
                 {confirmation?.visible && (
                     <Confirmation
@@ -147,8 +152,12 @@ export default function Home() {
                         onClose={() => setConfirmation({ visible: false, message: '' })}
                     />
                 )}
+                {/* slider */}
+                <div className='mt-lg-5 mt-3'>
+                    <h3 className='text-pink py-2'>Beautiful Silicone Fantasy Doll (🤑 Big Savings 🤑 Sale 50% OFF)</h3>
+                    <Shopping images={sliderImages} />
+                </div>
             </div>
-
         </>
 
 

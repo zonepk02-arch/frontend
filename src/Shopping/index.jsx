@@ -6,11 +6,11 @@ const Shopping = ({ images }) => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 3000,
+        speed: 4000,
         slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 0,
+        // autoplaySpeed: 0,
         cssEase: "linear",
         pauseOnHover: false,
         responsive: [
@@ -31,19 +31,8 @@ const Shopping = ({ images }) => {
                 {images.map((data, index) => (
                     <div key={index} className="slide-item">
                         <div
-                            style={{
-                                height: "230px",
-                                width: "100%",
-                                overflow: "hidden",
-                                borderRadius: "4px",
-                                background: "#ff7300ff",
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}
                         >
-                            {/* <img
+                            {/* <img className="rounded-top"
                                 src={data?.img}
                                 alt={`slide-${index}`}
                                 style={{
@@ -52,9 +41,24 @@ const Shopping = ({ images }) => {
                                     objectFit: "cover"
                                 }}
                             /> */}
-                            <p className="text-light text-start px-2 mt-2 f-12 para_w">
-                                {data?.para}
-                            </p>
+                            <div className="rounded-bottom pb-2"
+                                style={{
+                                    background: "#ff7300ff",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
+                                <p className="text-light text-start px-2 mt-2 f-12 para_w mb-2">
+                                    {data?.para}
+                                </p>
+                                <button class="loan-btn">
+                                    Buy Now
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e46618ff" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M13 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ))}
